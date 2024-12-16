@@ -87,6 +87,7 @@ export const createLOG10E = /* #__PURE__ */ recreateFactory(
       : Math.LOG10E
 )
 
+// eslint-disable-next-line camelcase
 export const createSQRT1_2 = /* #__PURE__ */ recreateFactory(
   // eslint-disable-line camelcase
   'SQRT1_2',
@@ -128,9 +129,9 @@ export const createVersion = /* #__PURE__ */ factory(
 
 // helper function to create a factory with a flag recreateOnConfigChange
 // idea: allow passing optional properties to be attached to the factory function as 4th argument?
+// eslint-disable-next-line space-before-function-paren
 function recreateFactory(name, dependencies, create) {
   return factory(name, dependencies, create, {
     recreateOnConfigChange: true
   })
 }
-// test
